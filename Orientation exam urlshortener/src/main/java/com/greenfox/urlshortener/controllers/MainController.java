@@ -21,13 +21,9 @@ public class MainController {
     }
 
     @GetMapping({"/",""})
-    public String showMain(Model model, @ModelAttribute(value = "link")Link link,
+    public String showMain(@ModelAttribute(value = "link")Link link,
                            @ModelAttribute(value = "error") String error,
                            @ModelAttribute(value = "message") String message){
-//        model.addAttribute("link", link);
-//        model.addAttribute("error", error);
-//        model.addAttribute("message", message);
-        //unnecessary
         return "index";
     }
 

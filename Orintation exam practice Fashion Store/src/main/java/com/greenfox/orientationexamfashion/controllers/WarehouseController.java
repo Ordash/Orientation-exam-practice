@@ -23,7 +23,7 @@ public class WarehouseController {
     @GetMapping(value = {"/",""})
     public String warehouse(Model model, @ModelAttribute(value = "error")String error){
         model.addAttribute("distinctSizes", itemService.findAllDistinctSize());
-        model.addAttribute("distinctItems", itemService.findAllDistinctName());
+        model.addAttribute("distinctNames", itemService.findAllDistinctName());
         model.addAttribute("items", itemService.findAll());
         return "warehouse";
     }
